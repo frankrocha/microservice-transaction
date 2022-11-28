@@ -7,7 +7,7 @@ import reactor.core.publisher.Mono;
 
 public interface TransactionService {
 	
-	public Flux<Transaction> getAllTransactionsByClient(String codCliente);
+	public Flux<Transaction> getAllTransactionsByClient(String codCliente,String cardNumber);
 	public Mono<Transaction> saveTransaction(Transaction transaction);
 	
 }

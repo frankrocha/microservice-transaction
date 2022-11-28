@@ -18,9 +18,9 @@ public class TransactionServiceImpl implements TransactionService {
 	private TransactionRepository transactionRepository;
 	
 	@Override
-	public Flux<Transaction> getAllTransactionsByClient(String codCliente) {
+	public Flux<Transaction> getAllTransactionsByClient(String codCliente,String cardNumber) {
 		
-		return transactionRepository.findAll().filter(x->x.getCodClient().equals(codCliente));
+		return transactionRepository.findAll().filter(x->x.getCodClient().equals(codCliente)&&x.getCardNumber().equals(cardNumber));
 	}
 
 	@Override

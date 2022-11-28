@@ -26,8 +26,8 @@ public class TransactionController {
 		return transactionService.saveTransaction(transaction);
 	}
 	
-	@GetMapping(value = "/transaction/{codCliente}")
-	public Flux<Transaction> getTransactions(@PathVariable String codCliente){
-		return transactionService.getAllTransactionsByClient(codCliente);
+	@GetMapping(value = "/transaction/{codCliente}/{carNumber}")
+	public Flux<Transaction> getTransactions(@PathVariable String codCliente,@PathVariable String carNumber){
+		return transactionService.getAllTransactionsByClient(codCliente,carNumber);
 	}
 }
