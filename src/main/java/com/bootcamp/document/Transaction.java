@@ -17,7 +17,7 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-@Document(collection = "client")
+@Document(collection = "transaction")
 public class Transaction {
 
 	@Id
